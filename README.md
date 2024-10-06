@@ -16,7 +16,7 @@ Hey! Mit diesem coolen Skript installierst du Pa11y und Pa11y Dashboard im Handu
    ```
    cd /pfad/zum/skript-ordner
    ```
-Entweder so oder: `Ordner im Finder anlegen` - `rechte Maustaste` - `Dienste`` - `Neues Terminal beim Ordner`
+Entweder so oder: `Ordner im Finder anlegen` - `rechte Maustaste` - `Dienste` - `Neues Terminal beim Ordner`
 
 
 4. Mach das Skript ausführbar:
