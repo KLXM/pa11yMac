@@ -1,4 +1,4 @@
-# Pa11y Installation Guide
+# Pa11y Installation Script for macOs
 
 ## Table of Contents
 1. [English Version](#english)
