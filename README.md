@@ -1,130 +1,158 @@
-# Pa11y and Pa11y Dashboard Installation Script for Mac
-Hey! With this cool script, you can install Pa11y and Pa11y Dashboard on your Mac in no time.
+# Pa11y Installation Guide
 
-## What you need
-- A Mac with macOS (logical, right?)
-- Internet (of course)
-- Admin rights (sudo and such)
+## Table of Contents
+1. [English Version](#english)
+   - [Description](#description)
+   - [Prerequisites](#prerequisites)
+   - [Installation Steps](#installation-steps)
+   - [Script Functions](#script-functions)
+   - [Post Installation](#post-installation)
+   - [Troubleshooting](#troubleshooting)
+   - [Notes](#notes)
 
-## Here's how it works
-1. Get the script `install_pa11y.sh`.
-2. Open Terminal.
-3. Go to the folder where the script is located:
-   ```
+2. [German Version](#deutsch)
+   - [Beschreibung](#beschreibung)
+   - [Voraussetzungen](#voraussetzungen)
+   - [Installationsschritte](#installationsschritte)
+   - [Skriptfunktionen](#skriptfunktionen)
+   - [Nach der Installation](#nach-der-installation)
+   - [Fehlerbehebung](#fehlerbehebung)
+   - [Hinweise](#hinweise)
+
+# English
+
+## Description
+A simple installation script for Pa11y and Pa11y Dashboard on macOS. This tool helps you set up Pa11y and its dashboard interface quickly and efficiently.
+
+## Prerequisites
+- A Mac with macOS
+- Internet connection
+- Administrator rights (sudo access)
+
+## Installation Steps
+1. Download the script `install_pa11y.sh`
+2. Open Terminal
+3. Navigate to the script directory:
+   ```bash
    cd /path/to/script-folder
    ```
-Alternatively: `Create folder in Finder` - `right-click` - `Services` - `New Terminal at Folder`
+   Alternative method: 
+   - Create folder in Finder
+   - Right-click
+   - Services
+   - New Terminal at Folder
 
 4. Make the script executable:
-   ```
+   ```bash
    chmod +x install_pa11y.sh
    ```
-5. And let's go:
-   ```
+
+5. Run the script:
+   ```bash
    ./install_pa11y.sh
    ```
-6. Just follow the instructions. You might need to enter your password, don't worry, that's normal.
 
-## What the script does
-1. Checks if Homebrew is present, if not, it gets installed.
-2. Looks for Node.js, installs it via Homebrew if necessary.
-3. Installs Pa11y globally with npm.
-4. Gets MongoDB via Homebrew and starts it.
-5. Clones the Pa11y Dashboard repo.
-6. Installs all dependencies for Pa11y Dashboard.
-7. Sets up the configuration.
-8. Builds the JavaScript stuff for the client.
+6. Follow the prompts (administrator password may be required)
 
-## After installation
-When the script is done, you still need to start Pa11y Dashboard yourself:
-1. Go to the Pa11y Dashboard folder:
-   ```
+## Script Functions
+The script automatically:
+1. Verifies and installs Homebrew if needed
+2. Checks for Node.js and installs via Homebrew if necessary
+3. Installs Pa11y globally using npm
+4. Installs and initializes MongoDB via Homebrew
+5. Clones the Pa11y Dashboard repository
+6. Installs all required dependencies
+7. Configures the dashboard settings
+8. Builds the client-side JavaScript components
+
+## Post Installation
+After script completion:
+1. Navigate to the Pa11y Dashboard directory:
+   ```bash
    cd pa11y-dashboard
    ```
-2. Start it:
-   ```
+
+2. Launch the dashboard:
+   ```bash
    npm start
    ```
-3. Open your browser and go to `http://localhost:4000`. Ta-da!
 
-## If something goes wrong
-If there are problems:
-- Check your internet connection.
-- Do you have the necessary rights?
-- For strange error messages: Google is your friend or ask the Pa11y community.
+3. Access the dashboard at `http://localhost:4000`
 
-## By the way
-The script assumes your Mac is set up normally. If you have any special settings or some things already installed differently, you might need to adjust the script a bit.
+## Troubleshooting
+If issues occur, verify:
+- Internet connectivity
+- Administrator permissions
+- For specific error messages, consult Google or the Pa11y community
 
-Have fun installing!
+## Notes
+This script assumes a standard macOS configuration. Custom configurations may require script modifications.
 
+# Deutsch
 
+## Beschreibung
+Ein einfaches Installationsskript für Pa11y und Pa11y Dashboard auf macOS. Dieses Tool hilft dir dabei, Pa11y und seine Dashboard-Oberfläche schnell und effizient einzurichten.
 
-# Pa11y und Pa11y Dashboard Installationsskript für Mac
+## Voraussetzungen
+- Ein Mac mit macOS
+- Internetverbindung
+- Administrator-Rechte (sudo-Zugriff)
 
-Hey! Mit diesem coolen Skript installierst du Pa11y und Pa11y Dashboard im Handumdrehen auf deinem Mac.
-
-## Was du brauchst
-
-- Einen Mac mit macOS (logisch, oder?)
-- Internet (klar)
-- Admin-Rechte (sudo und so)
-
-## So geht's
-
-1. Schnapp dir das Skript `install_pa11y.sh`.
-2. Mach das Terminal auf.
-3. Geh in den Ordner, wo das Skript liegt:
-   ```
+## Installationsschritte
+1. Lade das Skript `install_pa11y.sh` herunter
+2. Öffne das Terminal
+3. Navigiere zum Skript-Verzeichnis:
+   ```bash
    cd /pfad/zum/skript-ordner
    ```
-Entweder so oder: `Ordner im Finder anlegen` - `rechte Maustaste` - `Dienste` - `Neues Terminal beim Ordner`
+   Alternative Methode:
+   - Ordner im Finder anlegen
+   - Rechtsklick
+   - Dienste
+   - Neues Terminal beim Ordner
 
-
-4. Mach das Skript ausführbar:
-   ```
+4. Mache das Skript ausführbar:
+   ```bash
    chmod +x install_pa11y.sh
    ```
-5. Und los geht's:
-   ```
+
+5. Führe das Skript aus:
+   ```bash
    ./install_pa11y.sh
    ```
-6. Folg einfach den Anweisungen. Vielleicht musst du dein Passwort eingeben, keine Sorge, das ist normal.
 
-## Was das Skript alles macht
+6. Folge den Anweisungen (Administrator-Passwort wird möglicherweise benötigt)
 
-1. Checkt, ob Homebrew da ist, wenn nicht, wird's installiert.
-2. Schaut nach Node.js, installiert es mit Homebrew falls nötig.
-3. Installiert Pa11y global mit npm.
-4. Holt MongoDB via Homebrew und startet es.
-5. Klont das Pa11y Dashboard Repo.
-6. Installiert alle Abhängigkeiten für Pa11y Dashboard.
-7. Richtet die Konfiguration ein.
-8. Baut den JavaScript-Kram für den Client.
+## Skriptfunktionen
+Das Skript führt automatisch folgende Aktionen aus:
+1. Überprüft und installiert Homebrew falls nötig
+2. Prüft auf Node.js und installiert es via Homebrew falls erforderlich
+3. Installiert Pa11y global mittels npm
+4. Installiert und initialisiert MongoDB via Homebrew
+5. Klont das Pa11y Dashboard Repository
+6. Installiert alle erforderlichen Abhängigkeiten
+7. Konfiguriert die Dashboard-Einstellungen
+8. Erstellt die clientseitigen JavaScript-Komponenten
 
 ## Nach der Installation
-
-Wenn das Skript durch ist, musst du Pa11y Dashboard noch selbst starten:
-
-1. Geh in den Pa11y Dashboard Ordner:
-   ```
+Nach Abschluss des Skripts:
+1. Wechsle in das Pa11y Dashboard Verzeichnis:
+   ```bash
    cd pa11y-dashboard
    ```
-2. Starte das Ding:
-   ```
+
+2. Starte das Dashboard:
+   ```bash
    npm start
    ```
-3. Öffne deinen Browser und geh auf `http://localhost:4000`. Tada!
 
-## Wenn was schief geht
+3. Greife auf das Dashboard unter `http://localhost:4000` zu
 
-Falls es Probleme gibt:
-- Check deine Internetverbindung.
-- Hast du die nötigen Rechte?
-- Bei komischen Fehlermeldungen: Google ist dein Freund oder frag die Pa11y-Community.
+## Fehlerbehebung
+Bei auftretenden Problemen, überprüfe:
+- Internetverbindung
+- Administrator-Berechtigungen
+- Bei spezifischen Fehlermeldungen konsultiere Google oder die Pa11y-Community
 
-## Übrigens
-
-Das Skript geht davon aus, dass dein Mac normal eingerichtet ist. Wenn du irgendwelche speziellen Einstellungen hast oder manche Sachen schon anders installiert sind, musst du das Skript vielleicht ein bisschen anpassen.
-
-Viel Spaß beim Installieren!
+## Hinweise
+Dieses Skript geht von einer Standard-macOS-Konfiguration aus. Benutzerdefinierte Konfigurationen erfordern möglicherweise Skript-Anpassungen.
